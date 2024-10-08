@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="zh">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>果宠奇缘</title>
+    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/font-awesome.css">
+    <link href="http://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #f7f7f7;
+            color: #333;
+        }
+
+        header {
+            background-color: #fff8f0;
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .navbar {
+            margin-bottom: 0;
+        }
+
+        .slider {
+            position: relative;
+            overflow: hidden;
+            height: 400px;
+        }
+
+        .slider ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .slider li {
+            height: 400px;
+            background-size: cover;
+            background-position: center;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .style-banner {
+            text-align: center;
+            color: white;
+            background-color: rgba(0, 0, 0, 0.5);
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .container {
+            margin: 20px auto;
+            max-width: 1200px;
+        }
+
+        #user-center, #fruit-community {
+            margin: 20px auto;
+            padding: 20px;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            text-align: center;
+            margin-bottom: 20px;
+            color: #6b4f3b;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+        }
+
+        .fruit-card {
+            background: #fefefe;
+            border: 1px solid #e0e0e0;
+            border-radius: 10px;
+            padding: 15px;
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .fruit-card:hover {
+            transform: scale(1.05);
+        }
+
+        .btn {
+            background-color: #6b4f3b;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 5px;
+        }
+
+        .btn:hover {
+            background-color: #5a3e30;
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-lg navbar-light">
+            <div class="container">
+                <a class="navbar-brand font-weight-bold" href="index.html">果宠奇缘</a>
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ml-auto">
+                        <li class="nav-item active">
+                            <a class="nav-link" href="index.html">首页</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fruit-home.html">果宠家园</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="fruit-community.html">果宠社区</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="personal-center.html">个人中心</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+
+    <!-- 首页Banner -->
+    <div class="slider">
+        <ul class="rslides">
+            <li style="background-image: url('images/fruit-banner1.jpg');">
+                <div class="style-banner">
+                    <h3>新鲜果品送到你家</h3>
+                    <p>我们的果品均来自有机种植，保证新鲜健康。</p>
+                    <a href="about.html" class="btn">了解更多</a>
+                </div>
+            </li>
+            <li style="background-image: url('images/fruit-banner2.jpg');">
+                <div class="style-banner">
+                    <h3>我们种植和销售有机水果</h3>
+                    <p>健康生活，从这里开始。</p>
+                    <a href="about.html" class="btn">了解更多</a>
+                </div>
+            </li>
+            <li style="background-image: url('images/fruit-banner3.jpg');">
+                <div class="style-banner">
+                    <h3>自然与新鲜的果品供应</h3>
+                    <p>新鲜果品，带给你健康生活。</p>
+                    <a href="about.html" class="btn">了解更多</a>
+                </div>
+            </li>
+        </ul>
+    </div>
+    
+    <!-- 首页内容 -->
+    <div class="container">
+        <h2>当季果宠展示</h2>
+        <div class="grid">
+            <div class="fruit-card">
+                <img src="images/fruit1.jpg" alt="果宠1" class="img-fluid">
+                <h4>果宠名称 1</h4>
+                <p>性格: 可爱</p>
+                <p>价格: ¥100</p>
+                <a href="fruit-detail.html" class="btn">查看详情</a>
+            </div>
+            <div class="fruit-card">
+                <img src="images/fruit2.jpg" alt="果宠2" class="img-fluid">
+                <h4>果宠名称 2</h4>
+                <p>性格: 聪明</p>
+                <p>价格: ¥120</p>
+                <a href="fruit-detail.html" class="btn">查看详情</a>
+            </div>
+            <div class="fruit-card">
+                <img src="images/fruit3.jpg" alt="果宠3" class="img-fluid">
+                <h4>果宠名称 3</h4>
+                <p>性格: 活泼</p>
+                <p>价格: ¥90</p>
+                <a href="fruit-detail.html" class="btn">查看详情</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- 个人中心 -->
+    <section id="user-center">
+        <h2>个人中心</h2>
+        <ul>
+            <li>个人信息</li>
+            <li>订单信息</li>
+            <li>设置</li>
+            <li>帮助</li>
+            <li>意见反馈</li>
+        </ul>
+    </section>
+
+    <!-- 社区 -->
+    <section id="fruit-community">
+        <h2>果宠社区</h2>
+        <p>这里是用户分享养育心得、种植技巧、农产品分享的地方。</p>
+    </section>
+
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/responsiveslides.min.js"></script>
+    <script>
+        $(function () {
+            $(".rslides").responsiveSlides({
+                auto: true,
+                speed: 500,
+                timeout: 4000,
+                pager: true,
+                nav: true,
+                namespace: "centered-btns"
+            });
+        });
+    </script>
+</body>
+
+</html>
