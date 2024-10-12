@@ -8,87 +8,194 @@
     <link rel="stylesheet" href="css/bootstrap.css">
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
     <link rel="stylesheet" href="css/font-awesome.css">
+    <style>
+        /* 自定义样式 */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f0f0f0;
+        }
+
+        .header-background {
+            background-color: #f0f0f0;
+            height: 250px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo-section {
+            text-align: center;
+            position: relative;
+            margin-top: 20px;
+        }
+
+        .logo-section img {
+            width: 100px;
+            vertical-align: middle;
+        }
+
+        .logo-text {
+            display: inline-block;
+            font-size: 24px;
+            color: #ff6600;
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        .search-bar {
+            display: flex;
+            justify-content: center;
+            margin-top: 20px;
+            z-index: 3;
+            position: relative;
+        }
+
+        .search-bar input {
+            width: 60%;
+            padding: 10px;
+            padding-left: 40px; /* 为放大镜图标预留空间 */
+            border-radius: 20px;
+            border: 1px solid #ccc;
+            z-index: 3;
+            position: relative;
+        }
+
+        .search-bar button {
+            padding: 10px 20px;
+            border: none;
+            background-color: #ff6666;
+            color: white;
+            border-radius: 20px;
+            margin-left: 10px;
+            z-index: 3;
+            position: relative;
+        }
+
+        .search-bar i {
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            color: #888;
+            z-index: 4;
+        }
+
+        .main-content {
+            display: flex;
+            margin-top: 20px;
+        }
+
+        .personal-center {
+            width: 20%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+            margin-right: 20px;
+        }
+
+        .personal-center img {
+            width: 100px;
+            border-radius: 50%;
+            display: block;
+            margin: 0 auto 10px auto;
+        }
+
+        .community-content {
+            width: 60%;
+        }
+
+        .sidebar {
+            width: 20%;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+
+        .content-box {
+            background-color: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 10px;
+        }
+
+        .content-box h5 {
+            color: #ff6666;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 20px;
+            background-color: #f8f8f8;
+            margin-top: 20px;
+        }
+    </style>
 </head>
 
 <body>
-    <!-- header -->
-    <header>
-        <div class="main-top py-1">
-            <nav class="navbar navbar-expand-lg navbar-light fixed-navi">
-                <div class="container">
-                    <a class="navbar-brand font-weight-bold" href="index.html">
-                        <i class="fa fa-apple mr-2" aria-hidden="true"></i>果宠奇缘
-                    </a>
-                    <button class="navbar-toggler" type="button" data-toggle="collapse"
-                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                        aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
-                        <ul class="navbar-nav ml-lg-auto">
-                            <li class="nav-item"><a class="nav-link" href="index.html">首页</a></li>
-                            <li class="nav-item"><a class="nav-link" href="personal.html">个人中心</a></li>
-                            <li class="nav-item active"><a class="nav-link" href="community.html">果宠社区</a></li>
-                            <li class="nav-item"><a class="nav-link" href="garden.html">果宠家园</a></li>
-                        </ul>
-                    </div>
-                </div>
-            </nav>
+    <!-- header with logo and title -->
+    <header class="header-background">
+        <div class="logo-section">
+            <img src="images/logo.jpg" alt="Logo">
+            <span class="logo-text">果宠社区</span>
         </div>
     </header>
-    <!-- //header -->
 
-    <!-- 社区内容 -->
-    <div class="container py-5">
-        <h3 class="text-dark font-weight-bold text-center mb-4">果宠社区</h3>
+    <!-- search bar with icon -->
+    <div class="search-bar">
+        <i class="fa fa-search"></i> <!-- 放大镜图标 -->
+        <input type="text" placeholder="搜索">
+        <button>搜索</button>
+    </div>
 
-        <!-- 社区动态 -->
-        <div class="mb-4">
-            <h5>社区动态</h5>
-            <div class="card">
-                <div class="card-body">
-                    <p>用户发布的养育心得、种植技巧、农产品分享...</p>
-                    <button class="btn btn-light">评论</button>
-                    <button class="btn btn-light">点赞</button>
-                    <button class="btn btn-light">转发</button>
+    <!-- main content area -->
+    <div class="container main-content">
+        <!-- personal center -->
+        <div class="personal-center">
+            <img src="images/logo.jpg" alt="User Avatar">
+            <h4>个人中心</h4>
+            <p>小果宠131129</p>
+            <p>我参与的话题</p>
+            <ul>
+                <li>话题1</li>
+                <li>话题2</li>
+            </ul>
+            <p>我参加的活动与挑战</p>
+            <ul>
+                <li>活动1</li>
+                <li>活动2</li>
+            </ul>
+        </div>
+
+        <!-- community content -->
+        <div class="community-content">
+            <div class="content-box">
+                <h5>种植技巧和方法</h5>
+                <p>我的农场生活...</p>
+                <small>发布于：2023-04-06 16:52</small>
+                <p>后天可以...</p>
+                <div>
+                    <button>评论</button>
+                    <button>分享</button>
+                    <button>收藏</button>
+                    <button>点赞</button>
                 </div>
             </div>
         </div>
 
-        <!-- 话题讨论 -->
-        <div class="mb-4">
-            <h5>话题讨论</h5>
-            <div class="card">
-                <div class="card-body">
-                    <p>热门、最新话题...</p>
-                    <button class="btn btn-primary">参与讨论</button>
-                </div>
-            </div>
-        </div>
-
-        <!-- 活动与挑战 -->
-        <div class="mb-4">
-            <h5>活动与挑战</h5>
-            <div class="card">
-                <div class="card-body">
-                    <p>最新活动和挑战信息，例如友谊赛、种植大赛...</p>
-                    <button class="btn btn-success">参与活动</button>
-                </div>
-            </div>
+        <!-- sidebar with hot topics -->
+        <div class="sidebar">
+            <h5>话题热议榜</h5>
+            <ol>
+                <li>话题1</li>
+                <li>话题2</li>
+                <li>话题3</li>
+            </ol>
         </div>
     </div>
-    <!-- //社区内容 -->
 
     <!-- footer -->
-    <footer class="footer-emp-w3ls py-sm-5 py-4">
-        <div class="container py-xl-5 py-lg-3">
-            <p class="copy-right text-center pt-xl-5 pt-4">Copyright &copy; 2023. All rights reserved.</p>
-        </div>
+    <footer class="footer">
+        <p>Copyright &copy; 2023. All rights reserved.</p>
     </footer>
-    <!-- //footer -->
-
-    <script src="js/jquery-2.2.3.min.js"></script>
-    <script src="js/bootstrap.js"></script>
 </body>
 
 </html>
