@@ -5,11 +5,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>小兔鲜儿-新鲜、惠民、快捷！</title>
+    <title>个人中心</title>
     <!-- favicon icon -->
     <link rel="favicon icon" href="./bitbug_favicon.ico" type="image/x-icon" />
-    <meta name="description" content="小兔鲜儿官网，致力于打造全球最大的食品、生鲜电商购物平台。" />
-    <meta name="keywords" content="小兔鲜儿,食品,生鲜,服装,家电,电商,购物" />
+    <meta name="description" content="果宠奇缘" />
+    <meta name="keywords" content="果宠奇缘" />
     <!-- 引入css文件 -->
     <link rel="stylesheet" href="./css/user_base.css" />
     <link rel="stylesheet" href="./css/user_common.css">
@@ -35,6 +35,8 @@
 </head>
 
 <body>
+    <div id="background">
+    </div>
     <!-- header -->
     <header>
         <!-- navigation -->
@@ -51,21 +53,15 @@
                         aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent">
+                    <div class="collapse navbar-collapse text-center" id="navbarSupportedContent"
+                        style="padding: 20px;">
                         <ul class="navbar-nav ml-lg-auto">
                             <li class="nav-item">
                                 <a class="nav-link" href="index.html">首页
                                     <span class="sr-only">(current)</span>
                                 </a>
                             </li>
-                            <li class="nav-item mx-lg-4 my-lg-0 my-3 active">
-                                <a class="nav-link" href="about.html">About Us</a>
-                            </li>
                             <li class="nav-item dropdown">
-                                <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button"
-                                    data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                    Pages
-                                </a>
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item scroll" href="#services">Services</a>
                                     <a class="dropdown-item" href="gallery.html">Gallery</a>
@@ -77,31 +73,13 @@
                                 </div>
                             </li>
                             <li class="nav-item ml-lg-4 mt-lg-0 mt-3">
-                                <a class="nav-link" href="user.html">个人中心</a>
-                            </li>
-                            <li class="nav-item ml-lg-4 mt-lg-0 mt-3">
                                 <a class="nav-link" href="contact.html">果宠家园</a>
                             </li>
                             <li class="nav-item ml-lg-4 mt-lg-0 mt-3">
                                 <a class="nav-link" href="community.html">果宠社区</a>
                             </li>
                             <li class="search mx-lg-5 my-lg-0 my-4">
-                                <a class="play-icon popup-with-zoom-anim" href="#small-dialog">
-                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                </a>
                                 <div id="small-dialog" class="mfp-hide">
-                                    <div class="search-top">
-                                        <div class="search-inn">
-                                            <form action="#" method="post" class="disply-flex">
-                                                <input class="form-control" type="search" name="search"
-                                                    placeholder="Type something..." required>
-                                                <button class="btn2">
-                                                    <i class="fa fa-search" aria-hidden="true"></i>
-                                                </button>
-                                            </form>
-                                        </div>
-                                        <p>果宠奇缘</p>
-                                    </div>
                                 </div>
                             </li>
                             <li class="mb-lg-0 mb-4">
@@ -120,7 +98,7 @@
         <!-- 首先将网页中间的main内容分为左右两个大块 -->
         <div class="left">
             <div class="user">
-                <img src="/images/profile.jpg" alt="">
+                <img src="./images/profile.jpg" alt="">
                 <span>果宠奇缘</span>
                 <div>
                     <img src="./uploads/vip_gold.png" alt="">
@@ -180,15 +158,15 @@
             <div class="right_top">
                 <div class="vip">
                     <div class="vip_content">
-                        <img src="/images/pay.png" alt="">
+                        <img src="./images/pay.png" alt="">
                         <p>待付款</p>
                     </div>
                     <div class="vip_content">
-                        <img src="/images/send.png" alt="">
+                        <img src="./images/send.png" alt="">
                         <p>待发货</p>
                     </div>
                     <div class="vip_content">
-                        <img src="/images/check.png" alt="">
+                        <img src="./images/check.png" alt="">
                         <p>待收货</p>
                     </div>
                 </div>
@@ -215,7 +193,7 @@
                 </div>
                 <div class="right_middle_content">
                     <div class="my_order_left">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="my_order_left_text">
                             <p>商品1</p>
                             <span>颜色：白色 重量:10kg 数量:1</span>
@@ -238,7 +216,7 @@
                 </div>
                 <div class="right_middle_content">
                     <div class="my_order_left">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="my_order_left_text">
                             <p>商品2</p>
                             <span>颜色：白色 重量:10kg 数量:1</span>
@@ -261,7 +239,7 @@
                 </div>
                 <div class="right_middle_content">
                     <div class="my_order_left">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="my_order_left_text">
                             <p>商品3</p>
                             <span>颜色：白色 重量:10kg 数量:1</span>
@@ -290,7 +268,7 @@
                 </div>
                 <div class="collection_all">
                     <div class="collection">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品4</p>
                             <p> ￥<span>55</span></p>
@@ -298,21 +276,21 @@
                     </div>
                     <div class="collection">
                         <div class="six">6折</div>
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品5</p>
                             <p> ￥<span>20.9</span></p>
                         </div>
                     </div>
                     <div class="collection">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品6</p>
                             <p> ￥<span>209</span></p>
                         </div>
                     </div>
                     <div class="collection">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品7</p>
                             <p> ￥<span>274.5</span></p>
@@ -327,7 +305,7 @@
                 </div>
                 <div class="collection_all">
                     <div class="collection">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品7</p>
                             <p> ￥<span>99</span></p>
@@ -335,21 +313,21 @@
                     </div>
                     <div class="collection">
                         <div class="six">6折</div>
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品7</p>
                             <p> ￥<span>171.9</span></p>
                         </div>
                     </div>
                     <div class="collection">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品7</p>
                             <p> ￥<span>209</span></p>
                         </div>
                     </div>
                     <div class="collection">
-                        <img src="/images/goods.jpg" alt="">
+                        <img src="./images/goods.jpg" alt="">
                         <div class="collection_title">
                             <p>商品7</p>
                             <p> ￥<span>274.5</span></p>
@@ -362,7 +340,7 @@
     </div>
     <!-- 个人中心的模块 main end -->
 
-    <footer>
+    <div class="footer">
         <!-- 联系模块 contact start -->
         <div class="contact w">
             <!-- 客户服务 -->
@@ -404,8 +382,7 @@
         <!-- 联系模块 contact end -->
 
         <!-- 底部模块 footer start -->
-        <div class="footer">
-
+        <div class="bottom">
             <!-- 下半部分 版权区域 copyright -->
             <div class="copyright">
                 <p>
@@ -426,7 +403,7 @@
             </div>
         </div>
         <!-- 底部模块 footer end -->
-    </footer>
+    </div>
 
 </body>
 
