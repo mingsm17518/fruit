@@ -312,6 +312,6 @@
     height: 25.9%;
     z-index: -1;
     /* 设置背景图片 */
-    background-image: url("../image/background.jpg");
+    background-image: url("./images/background.jpg");
     background-size:cover;
   }
