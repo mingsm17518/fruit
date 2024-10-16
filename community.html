@@ -1,213 +1,263 @@
 <!DOCTYPE html>
 <html lang="zh">
-
-<head>
+  <head>
     <title>果宠社区</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <meta charset="UTF-8" />
-    <link rel="stylesheet" href="css/bootstrap.css">
+    <link rel="stylesheet" href="css/bootstrap.css" />
     <link rel="stylesheet" href="css/style.css" type="text/css" media="all" />
-    <link rel="stylesheet" href="css/font-awesome.css">
+    <link rel="stylesheet" href="css/font-awesome.css" />
     <style>
-        /* 自定义样式 */
-        body {
-            font-family: 'Arial', sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f0f0f0;
-        }
+      /* 自定义样式 */
+      body {
+        font-family: "Arial", sans-serif;
+        background-color: #f0f0f0;
+      }
 
-        /* 设置背景图 */
-        .header-background {
-            background-image: url('images/1.jpg'); /* 使用大背景图 */
-            background-size: cover;
-            background-position: center;
-            height: 350px; /* 根据需要调整高度 */
-            position: relative;
-            z-index: 1;
-        }
+      .header-background {
+        height: 250px;
+        position: relative;
+        z-index: 1;
+      }
 
-        /* 放置Logo和文字部分 */
-        .logo-section {
-            text-align: center;
-            position: relative;
-        }
-        
+      .logo-section {
+        text-align: center;
+        position: relative;
+        margin-top: 0px;
+        padding-top: 60px;
+      }
 
-        .logo-section img {
-            width: 100px;
-            vertical-align: middle;
-        }
+      .logo-section img {
+        margin: 0px;
+        width: 150px;
+        height: auto;
+        vertical-align: middle;
+      }
 
-        .logo-text {
-            display: inline-block;
-            font-size: 36px;
-            color: #ff6600;
-            vertical-align: middle;
-            margin-left: 10px;
-        }
+      .logo-text {
+        display: inline-block;
+        font-size: 45px;
+        color: #ff6600;
+        vertical-align: middle;
+        margin-left: 10px;
+      }
 
-        /* 搜索框部分 */
-        .search-bar {
-            display: flex;
-            justify-content: center;
-            margin-top: 20px;
-            z-index: 3;
-            position: relative;
-        }
+      .search-bar {
+        display: flex;
+        justify-content: center;
+        margin-top: 20px;
+        z-index: 3;
+        position: relative;
+      }
 
+      .search-bar input {
+        width: 60%;
+        padding: 10px;
+        padding-left: 40px; /* 为放大镜图标预留空间 */
+        border-radius: 20px;
+        border: 1px solid #ccc;
+        z-index: 3;
+        position: relative;
+      }
 
-        .search-bar input {
-            width: 60%;
-            padding: 10px;
-            padding-left: 40px; /* 为放大镜图标预留空间 */
-            border-radius: 20px;
-            border: 1px solid #ccc;
-            z-index: 3;
-            position: relative;
-        }
+      .search-bar button {
+        padding: 10px 20px;
+        border: none;
+        background-color: #ff6666;
+        color: white;
+        border-radius: 20px;
+        margin-left: 10px;
+        z-index: 3;
+        position: relative;
+      }
 
-        .search-bar button {
-            padding: 10px 20px;
-            border: none;
-            background-color: #ff6666;
-            color: white;
-            border-radius: 20px;
-            margin-left: 10px;
-            z-index: 3;
-            position: relative;
-        }
+      .search-bar i {
+        position: absolute;
+        left: 10%;
+        top: 50%;
+        transform: translateY(-50%);
+        color: #888;
+        z-index: 4;
+      }
 
-        .search-bar i {
-            position: absolute;
-            /* left: 10%; */
-            left: calc(25% + 10px); /* 根据输入框的相对位置调整 */
-            top: 50%;
-            transform: translateY(-50%);
-            color: #888;
-            z-index: 4;
-        }
+      .main-content {
+        display: flex;
+        margin-top: 20px;
+      }
 
-        .main-content {
-            display: flex;
-            margin-top: 20px;
-        }
+      .personal-center {
+        width: 20%;
+        background-color: #fff;
+        padding: 20px;
+        border-radius: 10px;
+        margin-right: 20px;
+      }
 
-        .personal-center {
-            width: 20%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-            margin-right: 20px;
-        }
+      .personal-center img {
+        width: 100px;
+        border-radius: 50%;
+        display: block;
+        margin: 0 auto 10px auto;
+      }
 
-        .personal-center img {
-            width: 100px;
-            border-radius: 50%;
-            display: block;
-            margin: 0 auto 10px auto;
-        }
+      .community-content {
+        width: 60%;
+      }
 
-        .community-content {
-            width: 60%;
-        }
+      .sidebar {
+        width: 20%;
+        background-color: #fff;
+        border-radius: 10px;
+        padding-left: 30px;
+        margin-left: 20px;
+      }
 
-        .sidebar {
-            width: 20%;
-            background-color: #fff;
-            padding: 20px;
-            border-radius: 10px;
-        }
+      .content-box {
+        background-color: #fff;
+        padding: 20px;
+        margin-bottom: 20px;
+        border-radius: 10px;
+      }
 
-        .content-box {
-            background-color: #fff;
-            padding: 20px;
-            margin-bottom: 20px;
-            border-radius: 10px;
-        }
+      .content-box h5 {
+        color: #ff6666;
+      }
 
-        .content-box h5 {
-            color: #ff6666;
-        }
-
-        .footer {
-            text-align: center;
-            padding: 20px;
-            background-color: #f8f8f8;
-            margin-top: 20px;
-        }
+      .footer {
+        text-align: center;
+        padding: 20px;
+        background-color: #f8f8f8;
+        margin-top: 20px;
+      }
+      .background-div {
+        margin: 0px;
+        width: 100%; /* 设置div的宽度 */
+        height: 300px; /* 设置div的高度 */
+        background-image: url("./images/background-image.jpg"); /* 设置背景图片，替换为你的图片URL */
+        background-size: cover; /* 使背景图片覆盖整个div，保持图片的宽高比 */
+        background-position: center; /* 将背景图片居中显示 */
+      }
+      body,
+      html {
+        height: 100%;
+      }
     </style>
-</head>
+  </head>
 
-<body>
-    <!-- header with background, logo and title -->
-    <header class="header-background">
-        <div class="logo-section">
-            <img src="images/logo.jpg" alt="Logo">
-            <span class="logo-text">果宠社区</span>
+  <body>
+    <!-- header with logo and title -->
+    <div class="background-div">
+      <header class="header-background">
+        <div
+          class="logo-section"
+          style="display: flex; align-items: center; justify-content: center"
+        >
+          <img src="images/logo.png" alt="Logo" style="margin-right: 10px" />
+          <div class="logo-text" style="display: flex; flex-direction: column">
+            <span>果宠社区</span>
+            <span style="font-size: 15px">FRUIT PETS COMMUNITY</span>
+          </div>
         </div>
-    </div>
-
-
-
         <!-- search bar with icon -->
         <div class="search-bar">
-            <i class="fa fa-search"></i> <!-- 放大镜图标 -->
-            <input type="text" placeholder="搜索">
-            <button>搜索</button>
+          <!-- 放大镜图标 -->
+          <input type="text" placeholder="搜索" />
+          <button>搜索</button>
         </div>
+      </header>
+    </div>
 
-    </header>
     <!-- main content area -->
     <div class="container main-content">
-        <!-- personal center -->
-        <div class="personal-center">
-            <img src="images/logo.jpg" alt="User Avatar">
-            <h4>个人中心</h4>
-            <p>小果宠131129</p>
-            <p>我参与的话题</p>
-            <ul>
-                <li>话题1</li>
-                <li>话题2</li>
-            </ul>
-            <p>我参加的活动与挑战</p>
-            <ul>
-                <li>活动1</li>
-                <li>活动2</li>
-            </ul>
-        </div>
+      <!-- personal center -->
+      <div class="personal-center">
+        <div style="text-align: center; font-size: 20px">个人中心</div>
+        <span style="display: inline-block; vertical-align: middle">
+          <img
+            style="margin-left: 0px; display: inline"
+            src="images/logo2.jpg"
+            alt="User Avatar"
+            width="30px"
+          />
+          <span style="font-size: 16px; text-align: start">果宠</span>
+        </span>
 
-        <!-- community content -->
-        <div class="community-content">
-            <div class="content-box">
-                <h5>种植技巧和方法</h5>
-                <p>我的农场生活...</p>
-                <small>发布于：2023-04-06 16:52</small>
-                <p>后天可以...</p>
-                <div>
-                    <button>评论</button>
-                    <button>分享</button>
-                    <button>收藏</button>
-                    <button>点赞</button>
-                </div>
-            </div>
-        </div>
+        <p>我参与的话题</p>
+        <ul>
+          <li>话题1</li>
+          <li>话题2</li>
+        </ul>
+        <p>我参加的活动与挑战</p>
+        <ul>
+          <li>活动1</li>
+          <li>活动2</li>
+        </ul>
+      </div>
 
-        <!-- sidebar with hot topics -->
-        <div class="sidebar">
-            <h5>话题热议榜</h5>
-            <ol>
-                <li>话题1</li>
-                <li>话题2</li>
-                <li>话题3</li>
-            </ol>
+      <!-- community content -->
+      <div class="community-content">
+        <div class="content-box">
+          <div class="search-bar" style="margin-top: 0px; padding-top: 0px">
+            <input
+              style="background-color: #f6f5f5; width: 100%; border: none"
+              type="text"
+            />
+          </div>
         </div>
+        <div class="content-box">
+          <span style="width: 115px; display: inline-block; text-align: center"
+            ><a>动态</a></span
+          >
+          <span style="width: 115px; display: inline-block; text-align: center"
+            ><a>话题</a></span
+          >
+          <span style="width: 115px; display: inline-block; text-align: center"
+            ><a>视频</a></span
+          >
+          <span style="width: 115px; display: inline-block; text-align: center"
+            ><a>活动与挑战</a></span
+          >
+        </div>
+        <div class="content-box">
+          <h5>种植技巧和方法</h5>
+          <p>我的农场生活...</p>
+          <small>发布于：2023-04-06 16:52</small>
+          <p>后天可以...</p>
+          <div>
+            <button>评论</button>
+            <button>分享</button>
+            <button>收藏</button>
+            <button>点赞</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- sidebar with hot topics -->
+      <div class="sidebar">
+        <div
+          style="
+            text-align: center;
+            font-size: 20px;
+            font-weight: bold;
+            padding: 2px;
+            padding: 0px;
+          "
+        >
+          话题热议榜
+        </div>
+        <div>
+          <ol>
+            <li>话题1</li>
+            <li>话题2</li>
+            <li>话题3</li>
+          </ol>
+        </div>
+      </div>
     </div>
 
     <!-- footer -->
     <footer class="footer">
-        <p>Copyright &copy; 2023. All rights reserved.</p>
+      <p></p>
     </footer>
-</body>
-
+  </body>
 </html>
