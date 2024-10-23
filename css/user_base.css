@@ -2,7 +2,46 @@
     display: flex;
     width: 1240px;
     margin: 0 auto;
+    z-index: 5;
+    background-size:cover;
+    
 }
+
+
+.bottom-section{
+
+    align-items: center; 
+    justify-content: center; 
+    text-align: center;
+    background-color: Honeydew;
+    z-index: -2;
+
+}
+#background-top {
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 31.9%;
+    z-index: -1;
+    background-image:url(../images/background.jpg) ;
+    background-size:cover;
+  }
+
+header{
+    height: 100%; /* 占据上半部分 */
+    width: 100%;
+    background-image: url('../images/background.jpg');
+    background-size: cover;
+    background-position: center;
+    display: flex; /* 使用 flexbox 对齐文字 */
+    align-items: center; /* 垂直居中 */
+    justify-content: center; /* 水平居中 */
+    color: white; /* 文字颜色 */
+    text-align: center; /* 文字居中 */
+    z-index: -1;
+}
+
 
 .left {
     width: 232px;
@@ -61,7 +100,7 @@
     flex-direction: column;
     align-items: center;
     border-bottom: 2px solid rgb(233, 233, 233);
-    background-color: #fff;
+    /* background-color: #fff; */
     padding-bottom: 15px;
 }
 
@@ -305,14 +344,3 @@
     font-size: 20px;
 }
 
-#background {
-    position:absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 31.9%;
-    z-index: -1;
-    /* 设置背景图片 */
-    background-image:url(../images/background.jpg);
-    background-size:cover;
-  }
