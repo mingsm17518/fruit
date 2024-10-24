@@ -133,9 +133,17 @@
         margin: 0px;
         width: 100%; /* 设置div的宽度 */
         height: 300px; /* 设置div的高度 */
-        background-image: url("./images/background-image.jpg"); /* 设置背景图片，替换为你的图片URL */
+        background-image: url("./images/background.jpg"); /* 设置背景图片，替换为你的图片URL */
         background-size: cover; /* 使背景图片覆盖整个div，保持图片的宽高比 */
         background-position: center; /* 将背景图片居中显示 */
+      }
+      .rounded-rectangle {
+        width: 200px;
+        height: 30px;
+        background-color: rgb(217, 213, 213);
+        border-radius: 15px; /* 圆角半径，可以根据需要调整 */
+        margin: 10px auto; /* 使矩形在页面中居中 */
+        text-align: center;
       }
       body,
       html {
@@ -175,7 +183,7 @@
         <span style="display: inline-block; vertical-align: middle">
           <img
             style="margin-left: 0px; display: inline"
-            src="images/logo2.jpg"
+            src="images/profile.jpg"
             alt="User Avatar"
             width="30px"
           />
@@ -183,15 +191,12 @@
         </span>
 
         <p>我参与的话题</p>
-        <ul>
-          <li>话题1</li>
-          <li>话题2</li>
-        </ul>
-        <p>我参加的活动与挑战</p>
-        <ul>
-          <li>活动1</li>
-          <li>活动2</li>
-        </ul>
+        <div class="rounded-rectangle">#苹果宠攻略</div>
+        <div class="rounded-rectangle">#鲜果开箱分享</div>
+        <div class="rounded-rectangle">#果宠的治愈瞬间</div>
+        <p>我参与的活动与挑战</p>
+        <div class="rounded-rectangle">#果宠时装挑战赛</div>
+        <div class="rounded-rectangle">#果宠养成比拼</div>
       </div>
 
       <!-- community content -->
@@ -202,6 +207,36 @@
               style="background-color: #f6f5f5; width: 100%; border: none"
               type="text"
             />
+          </div>
+          <br />
+          <div>
+            <button>表情</button>
+            <button>图片</button>
+            <button>视频</button>
+            <button>话题</button>
+            <button
+              style="
+                background-color: #fff;
+                padding: 10px 20px;
+                border: none;
+                margin-left: 500px;
+                z-index: 3;
+                position: relative;
+              "
+            ></button>
+            <div
+              style="
+                width: 80px;
+                height: 30px;
+                background-color: #ff6666;
+                color: #fff;
+                border-radius: 15px; /* 圆角半径，可以根据需要调整 */
+                text-align: center;
+                padding: 1px;
+              "
+            >
+              发送
+            </div>
           </div>
         </div>
         <div class="content-box">
@@ -220,9 +255,16 @@
         </div>
         <div class="content-box">
           <h5>种植技巧和方法</h5>
-          <p>我的农场生活...</p>
-          <small>发布于：2023-04-06 16:52</small>
-          <p>后天可以...</p>
+          <div style="margin-top: 10px; margin-bottom: 10px">
+            <img
+              src="images/farmer1.jpg"
+              style="height: 20px; width: 20px"
+            />&nbsp; <font>我的农村生活</font>
+          </div>
+          <font style="color: black; font-size: 15px"
+            >芥菜主要以秋插为主，从七月下旬至十月可陆续播种，芥菜生长升温为15到25度，一般以秋播为主。种植芥菜时，我们要选择通透性，排水性都较良好且比较肥沃的土地，这样的土地有利于芥菜的生长和后续管理。种植芥菜前，我们需要将土地进行翻整，以便为芥菜提供良好的生长环境。</font
+          >
+          <p><small>发布于：2023-04-06 16:52</small></p>
           <div>
             <button>评论</button>
             <button>分享</button>
@@ -233,7 +275,7 @@
       </div>
 
       <!-- sidebar with hot topics -->
-      <div class="sidebar">
+      <div class="sidebar" style="width: 1000px">
         <div
           style="
             text-align: center;
@@ -245,12 +287,91 @@
         >
           话题热议榜
         </div>
+        <p></p>
         <div>
-          <ol>
-            <li>话题1</li>
-            <li>话题2</li>
-            <li>话题3</li>
-          </ol>
+          <div style="margin-bottom: 10px; margin-top: 20px">
+            <span
+              style="
+                background-color: #e08c80;
+                width: 25px;
+                display: inline-block;
+                text-align: center;
+                margin-left: 0px;
+                color: #fff;
+              "
+              >1</span
+            >&nbsp;<span style="font-size: 15px">收到的水果好新鲜！</span>
+          </div>
+          <div style="margin-bottom: 10px">
+            <span
+              style="
+                background-color: #e08c80;
+                width: 25px;
+                display: inline-block;
+                text-align: center;
+                margin-left: 0px;
+                color: #fff;
+              "
+              >2</span
+            >&nbsp;<span style="font-size: 13px"
+              >你的苹果宠长到什么阶段了？</span
+            >
+          </div>
+          <div style="margin-bottom: 10px">
+            <span
+              style="
+                background-color: #e08c80;
+                width: 25px;
+                display: inline-block;
+                text-align: center;
+                margin-left: 0px;
+                color: #fff;
+              "
+              >3</span
+            >&nbsp;<span style="font-size: 15px">被果宠治愈到了</span>
+          </div>
+          <div style="margin-bottom: 10px">
+            <span style="margin-left: 8px; color: #ccc">4</span>&nbsp;<span
+              style="font-size: 15px"
+              >&nbsp;&nbsp;橘宠限时购</span
+            >
+          </div>
+          <div style="margin-bottom: 10px">
+            <span style="margin-left: 8px; color: #ccc">5</span>&nbsp;<span
+              style="font-size: 15px"
+              >&nbsp;&nbsp;香蕉的生长过程</span
+            >
+          </div>
+          <div style="margin-bottom: 10px">
+            <span style="margin-left: 8px; color: #ccc">6</span>&nbsp;<span
+              style="font-size: 15px"
+              >&nbsp;&nbsp;果宠时装大赛进行中</span
+            >
+          </div>
+          <div style="margin-bottom: 10px">
+            <span style="margin-left: 8px; color: #ccc">7</span>&nbsp;<span
+              style="font-size: 15px"
+              >&nbsp;&nbsp;我的果宠独one无two</span
+            >
+          </div>
+          <div style="margin-bottom: 10px">
+            <span style="margin-left: 8px; color: #ccc">8</span>&nbsp;<span
+              style="font-size: 15px"
+              >&nbsp;&nbsp;第一批集齐果宠的人已就位</span
+            >
+          </div>
+          <div style="margin-bottom: 10px">
+            <span style="margin-left: 8px; color: #ccc">9</span>&nbsp;<span
+              style="font-size: 15px"
+              >&nbsp;&nbsp;什么水果维C含量高？</span
+            >
+          </div>
+          <div style="margin-bottom: 10px">
+            <span style="margin-left: 5px; color: #ccc">10</span>&nbsp;<span
+              style="font-size: 15px"
+              >&nbsp;今天你吃水果了吗</span
+            >
+          </div>
         </div>
       </div>
     </div>
