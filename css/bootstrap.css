@@ -537,7 +537,7 @@ mark,
   /* 确保图片按比例填充，不失真 */
 }
 
-.more-text {
+.who-agile .more-text {
   font-size: 5rem; /* 调整字体大小 */
   font-weight: bold; /* 加粗字体 */
 }
